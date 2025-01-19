@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>All Records</h2>
+<ul>
+  {% for row in rows %}
+    <li>{{ row.1 }} - {{ row.2 }}</li>
+  {% endfor %}
+</ul>
+<a href="{% url 'create_record' %}">Create New</a>
+{% endblock %}
